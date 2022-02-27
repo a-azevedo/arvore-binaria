@@ -1,8 +1,10 @@
-public class BinNo<T> implements Comparable<T> {
+package model;
 
-    T conteudo;
-    BinNo noEsq;
-    BinNo noDir;
+public class BinNo<T extends Comparable<T>>  {
+
+    private T conteudo;
+    private BinNo noEsq;
+    private BinNo noDir;
 
     public BinNo(){
 
@@ -38,13 +40,9 @@ public class BinNo<T> implements Comparable<T> {
 
     @Override
     public String toString() {
-        return "BinNo{" +
+        return "model.BinNo{" +
                 "conteudo=" + conteudo +
                 '}';
     }
-
-    @Override
-    public int compareTo(T o) {
-        return 0;
-    }
+    
 }
